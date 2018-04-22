@@ -23,3 +23,5 @@ hs_err_pid*
 
 
 !lib/algs4.jar
+src/main/resources/
+out/
