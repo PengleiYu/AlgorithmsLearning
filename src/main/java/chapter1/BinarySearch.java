@@ -1,3 +1,5 @@
+package chapter1;
+
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
 
@@ -24,6 +26,7 @@ public class BinarySearch {
 
     /**
      * 二分查找
+     *
      * @param key key
      * @param arr arr
      * @return rank
