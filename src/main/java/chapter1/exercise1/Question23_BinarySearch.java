@@ -10,7 +10,7 @@ import java.util.Arrays;
  * 使用递归版本的二分查找，并跟踪该方法的调用
  * //todo 考虑用无侵入的代理模式
  */
-public class Question23 {
+public class Question23_BinarySearch {
     public static void main(String[] args) {
         int[] whiteList = new In(args[0]).readAllInts();
         Arrays.sort(whiteList);

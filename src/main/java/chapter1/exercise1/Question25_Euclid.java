@@ -1,6 +1,6 @@
 package chapter1.exercise1;
 
-public class Question25 {
+public class Question25_Euclid {
     /**
      * 第二问：读取命令行参数进行计算
      */
