@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3a82992-12ec-43e2-9670-53e9a868365a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/chapter1/exercise1/Fibonacci.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chapter1/exercise1/Question7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chapter1/exercise1/Question9.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b3a82992-12ec-43e2-9670-53e9a868365a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -645,9 +640,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Fibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter1.exercise1.Fibonacci" />
+  <component name="RunManager" selected="Application.Hello">
+    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Hello" />
+      <module name="AlgorithmsLearning_main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Question19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter1.exercise1.Question19" />
       <module name="AlgorithmsLearning_main" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -656,11 +656,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-    </configuration>
-    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Hello" />
-      <module name="AlgorithmsLearning_main" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="Question7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter1.exercise1.Question7" />
@@ -735,11 +730,11 @@
       <item itemvalue="Application.TestDraw" />
       <item itemvalue="Application.Question7" />
       <item itemvalue="Application.Question9" />
-      <item itemvalue="Application.Fibonacci" />
+      <item itemvalue="Application.Question19" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Fibonacci" />
+        <item itemvalue="Application.Question19" />
         <item itemvalue="Application.Question9" />
         <item itemvalue="Application.Question7" />
         <item itemvalue="Application.TestDraw" />
@@ -770,7 +765,7 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20956257" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20956257" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Designer" order="3" />

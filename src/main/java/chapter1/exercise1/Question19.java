@@ -5,9 +5,10 @@ import edu.princeton.cs.algs4.StdOut;
 import java.math.BigInteger;
 
 /**
+ * Fibonacci数列
  * 运行一个小时，看能得到结果的N最大是多少
  */
-public class Fibonacci {
+public class Question19 {
     public static void main(String[] args) {
         for (int N = 0; N < 100; N++)
             StdOut.println(N + " " + F2(N));
