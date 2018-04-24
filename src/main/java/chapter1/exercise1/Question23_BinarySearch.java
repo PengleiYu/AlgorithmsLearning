@@ -19,7 +19,7 @@ public class Question23_BinarySearch {
         }
     }
 
-    private static int binarySearch(int key, int[] arr) {
+    static int binarySearch(int key, int[] arr) {
         return rank(key, arr, 0, arr.length - 1, 0);
     }
 
