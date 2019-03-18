@@ -2,6 +2,7 @@ package chapter1;
 
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
+import utils.DrawUtils;
 
 import java.util.Arrays;
 
@@ -11,6 +12,24 @@ import java.util.Arrays;
 public class TestDraw {
     public static void main(String[] args) {
         drawRandomArray();
+//        drawFunction();
+//        testDraw();
+    }
+
+    private static void testDraw() {
+        StdDraw.setPenRadius(StdDraw.getPenRadius() * 10);
+        StdDraw.point(.3, .5);// 画点
+        StdDraw.point(0, .5);
+        StdDraw.point(.5, 0);
+        StdDraw.setPenRadius();
+        StdDraw.line(.2, .4, .8, .9);// 画线
+
+        StdDraw.circle(.5, .5, .4);// 画圆
+        StdDraw.square(.5, .5, .4);
+
+        double[] x = {.2, .8, .6, .3};
+        double[] y = {.3, .5, .7, .6};
+        StdDraw.polygon(x, y);
     }
 
     /**
@@ -38,14 +57,8 @@ public class TestDraw {
         for (int i = 0; i < N; i++) {
             arr[i] = StdRandom.uniform();
         }
-        /* 排序 */
+        DrawUtils.drawArray(arr);
         Arrays.sort(arr);
-        for (int i = 0; i < N; i++) {
-            double x = 1.0 * i / N;
-            double y = arr[i] / 2.0;
-            double rw = 0.5 / N;
-            double rh = arr[i] / 2.0;
-            StdDraw.filledRectangle(x, y, rw, rh);
-        }
+        DrawUtils.drawArray(arr);
     }
 }
