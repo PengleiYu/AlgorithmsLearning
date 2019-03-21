@@ -14,4 +14,17 @@ public interface Api {
 
         String toString();
     }
+
+    /**
+     * 日期
+     */
+    interface Date {
+        int day();
+
+        int month();
+
+        int year();
+
+        String toString();
+    }
 }

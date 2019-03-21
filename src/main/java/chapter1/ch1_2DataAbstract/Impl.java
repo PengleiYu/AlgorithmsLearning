@@ -43,4 +43,70 @@ public class Impl {
             StdOut.printf("delta=%d, %f%%", Math.abs(d), d * 100.0 / T);
         }
     }
+
+    /**
+     * Date的一种实现
+     */
+    static class Data1 implements Api.Date {
+        private final int day;
+        private final int month;
+        private final int year;
+
+        Data1(int day, int month, int year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        @Override
+        public int day() {
+            return day;
+        }
+
+        @Override
+        public int month() {
+            return month;
+        }
+
+        @Override
+        public int year() {
+            return year;
+        }
+
+        @Override
+        public String toString() {
+            return month() + "/" + day() + "/" + year();
+        }
+    }
+
+    /**
+     * Date的另一种实现
+     */
+    static class Date2 implements Api.Date {
+        private final int value;
+
+        Date2(int m, int d, int y) {
+            value = y * 512 + m * 32 + d;
+        }
+
+        @Override
+        public int day() {
+            return value % 32;
+        }
+
+        @Override
+        public int month() {
+            return (value / 32) % 16;
+        }
+
+        @Override
+        public int year() {
+            return value / 512;
+        }
+
+        @Override
+        public String toString() {
+            return month() + "/" + day() + "/" + year();
+        }
+    }
 }
