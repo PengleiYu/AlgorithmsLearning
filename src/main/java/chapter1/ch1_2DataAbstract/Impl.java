@@ -1,5 +1,6 @@
 package chapter1.ch1_2DataAbstract;
 
+import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
@@ -107,6 +108,81 @@ public class Impl {
         @Override
         public String toString() {
             return month() + "/" + day() + "/" + year();
+        }
+    }
+
+    /**
+     * 累加器实现
+     */
+    static class Accumulator1 implements Api.Accumulator {
+        private double total;
+        private int N;
+
+        @Override
+        public void addDataValue(double val) {
+            total += val;
+            N++;
+        }
+
+        @Override
+        public double mean() {
+            return total / N;
+        }
+
+        @Override
+        public String toString() {
+            return "Mean (" + N + " values): " + String.format("%7.5f", mean());
+        }
+    }
+
+    /**
+     * 累加器可视化实现
+     */
+    static class VisualAccumulator implements Api.Accumulator {
+        private double total;
+        private int N;
+
+        public VisualAccumulator(int trials, double max) {
+            StdDraw.setXscale(0, trials);
+            StdDraw.setYscale(0, max);
+            StdDraw.setPenRadius(.005);
+        }
+
+        @Override
+        public void addDataValue(double val) {
+            N++;
+            total += val;
+            StdDraw.setPenColor(StdDraw.DARK_GRAY);
+            StdDraw.point(N, val);
+            StdDraw.setPenColor(StdDraw.RED);
+            StdDraw.point(N, total / N);
+        }
+
+        @Override
+        public double mean() {
+            return total / N;
+        }
+
+        @Override
+        public String toString() {
+            return "Mean (" + N + " values): " + String.format("%7.5f", mean());
+        }
+    }
+
+    /**
+     * 测试累加器
+     * javac -cp $jar chapter1/ch1_2DataAbstract/*.java
+     * java -cp ${jar}:. chapter1.ch1_2DataAbstract.Impl\$TestAccumator 10000
+     */
+    static class TestAccumulator {
+        public static void main(String[] args) {
+            int T = Integer.parseInt(args[0]);
+//            Accumulator1 a = new Accumulator1();
+            VisualAccumulator a = new VisualAccumulator(T, 1.0);
+            for (int i = 0; i < T; i++) {
+                a.addDataValue(StdRandom.random());
+            }
+            StdOut.println(a);
         }
     }
 }

@@ -27,4 +27,15 @@ public interface Api {
 
         String toString();
     }
+
+    /**
+     * 累加器
+     */
+    interface Accumulator {
+        void addDataValue(double val);
+
+        double mean();
+
+        String toString();
+    }
 }
