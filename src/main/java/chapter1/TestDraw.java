@@ -2,7 +2,6 @@ package chapter1;
 
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
-import utils.DrawUtils;
 
 import java.util.Arrays;
 
@@ -11,10 +10,7 @@ import java.util.Arrays;
  */
 public class TestDraw {
     public static void main(String[] args) {
-//        drawRandomArray();
-//        drawFunction();
-//        testDraw();
-        testSort();
+        testDraw();
     }
 
     private static void testDraw() {
@@ -58,64 +54,8 @@ public class TestDraw {
         for (int i = 0; i < N; i++) {
             arr[i] = StdRandom.uniform();
         }
-        DrawUtils.drawArray(arr);
+//        DrawUtils.drawArrayWithPair(arr);
         Arrays.sort(arr);
-        DrawUtils.drawArray(arr);
-    }
-
-    /**
-     * 测试绘制排序过程
-     */
-    private static void testSort() {
-        int N = 50;
-        double[] arr = new double[N];
-        for (int i = 0; i < N; i++) {
-            arr[i] = StdRandom.uniform();
-        }
-        DrawUtils.drawArray(arr);
-//        selectionSort(arr);
-//        insertionSort(arr);
-        shellSort(arr);
-    }
-
-    private static void selectionSort(double[] arr) {
-        int N = arr.length;
-        for (int i = 0; i < N; i++) {
-            int min = i;
-            for (int j = i + 1; j < N; j++) if (arr[j] < arr[min]) min = j;
-            double tmp = arr[i];
-            arr[i] = arr[min];
-            arr[min] = tmp;
-            DrawUtils.drawArray(arr);
-        }
-    }
-
-    private static void insertionSort(double[] arr) {
-        int N = arr.length;
-        for (int i = 1; i < N; i++) {
-            for (int j = i; j > 0 && arr[j] < arr[j - 1]; j--) {
-                double tmp = arr[j];
-                arr[j] = arr[j - 1];
-                arr[j - 1] = tmp;
-                DrawUtils.drawArray(arr);
-            }
-        }
-    }
-
-    private static void shellSort(double[] a) {
-        int N = a.length;
-        int h = 1;
-        while (h < N / 3) h = 3 * h + 1;
-        while (h >= 1) {
-            for (int i = h; i < N; i++) {
-                for (int j = i; j >= h && a[j] < a[j - h]; j -= h) {
-                    double tmp = a[j];
-                    a[j] = a[j - h];
-                    a[j - h] = tmp;
-                    DrawUtils.drawArray(a);
-                }
-            }
-            h = h / 3;
-        }
+//        DrawUtils.drawArrayWithPair(arr);
     }
 }
