@@ -1,5 +1,8 @@
 package chapter1.ch1_2DataAbstract;
 
+/**
+ * 尝试自己定义api
+ */
 public interface Api {
     /**
      * 计数器
